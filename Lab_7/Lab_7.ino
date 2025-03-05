@@ -1,3 +1,6 @@
+#include "arduino_secrets.h"
+#include "thingProperties.h"
+
 void setup() {
   // put your setup code here, to run once:
 
