@@ -32,7 +32,7 @@ void setup() {
     ArduinoCloud.update();
     delay(500);
   }
-  
+
 }
 
 void loop() { 
@@ -61,6 +61,13 @@ void loop() {
   }
   if (pulse_signal < lower_threshold) {
     any_peak_detected = false;
+  }
+
+    counter++;
+  if (counter > 200){
+    ArduinoCloud.update();
+    Serial.println(bPM);
+    counter = 0;
   }
 
 }
